@@ -1,0 +1,4 @@
+export enum Status {
+    DISPONIBLE='DISPONIBLE',
+    INDISPONIBLE='INDISPONIBLE'
+}

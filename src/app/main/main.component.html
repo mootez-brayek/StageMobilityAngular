@@ -1,0 +1,77 @@
+<div class="section mt-3">
+    <div class="px-3">
+        <div class="theme-container"*ngFor="let l of Logements">
+             
+            <div class="properties-carousel" >   
+                <div class="swiper-container carousel-outer"> 
+                    <div class="swiper-wrapper">  
+                        <div class="swiper-slide"> 
+                            <div class="mdc-card property-item grid-item column-4 full-width-page" >
+                                <div class="thumbnail-section">
+                                    <div class="row property-status">
+                                        <span class="blue">{{l.type}}</span>
+                                        
+                                    </div> 
+                                    <div class="property-image" > 
+                                        <div class="swiper-container">
+                                            <div class="swiper-wrapper"> 
+                                                <div class="post-image">
+                                                    <a data-fancybox="post1" >
+                                                        <img src="http://localhost:8083/Stage/Logement/Imgarticles/{{l.idLogement}}"  alt="">
+                                                    </a>
+                                                    <!-- Action buttons -->
+                                                    <!-- /partials/pages/feed/buttons/feed-post-actions.html -->
+                                                </div>
+                     
+                                        </div>  
+                                    </div> 
+                                   
+                                </div>
+                                <div class="property-content-wrapper"> 
+                                    <div class="property-content">
+                                        <div class="content">
+                                        
+                                            <p class="row address flex-nowrap">
+                                                <i class="material-icons text-muted">location_on</i>
+                                                <span>{{l.adresse}}</span>
+                                            </p>
+                                            <div class="row between-xs middle-xs">
+                                                <h3 class="primary-color price">
+                                                    <span>$0{{l.prix}} /month</span> 
+                                                </h3> 
+                                              
+                                            </div>
+                                            <div class="d-none d-md-flex d-lg-flex d-xl-flex">
+                                                <div class="description mt-3"> 
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat modi dignissimos blanditiis accusamus, magni provident omnis perferendis laudantium illo recusandae ab molestiae repudiandae cum obcaecati nulla adipisci fuga culpa repellat!</p>
+                                                </div>
+                                            </div>
+                                           
+                                            <div class="features mt-3">
+                                                <p><span>Bedrooms</span><span>{{l.nbrChambre}}</span></p>
+                                            </div>   
+                                        </div> 
+                                        <div class="grow"></div>
+                                        <div class="actions row between-xs middle-xs">
+                                            <p class="row date mb-0">
+                                                <i class="material-icons text-muted">date_range</i>
+                                                <span class="mx-2">12 September, 2013</span>
+                                            </p> 
+                                            <button class="mdc-button mdc-button--raised next-tab mdc-ripple-upgraded" type="button">
+                                                <span class="mdc-button__ripple"></span> 
+                                                <span class="mdc-button__label">Signez Contreat</span> 
+                                                
+                                            </button>  
+                                        </div>
+                                    </div>  
+                                </div> 
+                            </div>                  
+                        </div> 
+                     
+                    </div>  
+
+                </div>
+            </div> 
+        </div>
+    </div>   
+</div> 

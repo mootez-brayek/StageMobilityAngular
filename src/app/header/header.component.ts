@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CondidatService } from '../Service/condidat.service';
 import { Condidat } from '../model/condidat.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,26 +10,19 @@ import { Condidat } from '../model/condidat.model';
 })
 export class HeaderComponent implements OnInit {
   Condidats:any={}
-  constructor(private condidat:CondidatService) { }
+  body:any={}
+  message: string="";
+  userFile: any;
+  imagePath: any="";
+  imgURL: any;
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+
+  }
+  OnAddLogement(){
+    this.router.navigateByUrl('/logement');
   }
 
-
-  getConddiat(){
-    this.condidat.retrieveAllCondidat().subscribe({
-      next:(data:any)=>{
-
-        this.Condidats=data
-       
-      console.log(data)
-        },
-        error:(err:any)=>{
-          console.log(err)
-        
-        },
-        complete:()=>{},
-    
-    })
-  }
+ 
 }
