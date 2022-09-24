@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CondidatService } from '../Service/condidat.service';
 import { Condidat } from '../model/condidat.model';
 import { Router } from '@angular/router';
+import {MatDialog} from '@angular/material/dialog';
+import { LogementComponent } from '../logement/logement.component';
+
 
 @Component({
   selector: 'app-header',
@@ -15,14 +18,21 @@ export class HeaderComponent implements OnInit {
   userFile: any;
   imagePath: any="";
   imgURL: any;
-  constructor(private router:Router) { }
+  constructor(private router:Router,
+              private dialog: MatDialog) { }
 
   ngOnInit(): void {
 
   }
   OnAddLogement(){
-    this.router.navigateByUrl('/logement');
-  }
+   
+  
+  let dialogRef = this.dialog.open(LogementComponent, {
 
- 
+    data: { body: this.body }
+  });
+  dialogRef.afterClosed().subscribe(result => {
+    this.body = result;
+  });
+}
 }

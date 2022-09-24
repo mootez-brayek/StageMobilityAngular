@@ -1,0 +1,14 @@
+.inputPossitionFix {
+	display: flex;
+	justify-content: space-between;
+}
+
+.taskNameInput {
+	width: 512px;
+	margin-bottom: 16px;
+  margin-top: 20px;
+}
+
+.taskModuleInput, .taskTypeInput {
+	width: 47%;
+}

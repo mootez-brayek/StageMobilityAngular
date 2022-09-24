@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LogementService } from '../Service/logement.service';
+import {MatDialog} from '@angular/material/dialog';
+import { ContratComponent } from '../contrat/contrat.component';
 
 @Component({
   selector: 'app-main',
@@ -8,7 +10,9 @@ import { LogementService } from '../Service/logement.service';
 })
 export class MainComponent implements OnInit {
   Logements:any={}
-  constructor(private logement:LogementService) { }
+  constructor(private logement:LogementService,
+              public dialog: MatDialog
+              ) { }
 
   ngOnInit(): void {
     this.get();
@@ -31,4 +35,9 @@ export class MainComponent implements OnInit {
     
     })
   }
+  OnAddContrat(){
+    this.dialog.open(ContratComponent);
+  }
+
+ 
 }

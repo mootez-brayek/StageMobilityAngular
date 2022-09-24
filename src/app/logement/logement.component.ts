@@ -3,6 +3,7 @@ import { LogementService } from '../Service/logement.service';
 import { Type } from '../model/type';
 
 
+
 @Component({
   selector: 'app-logement',
   templateUrl: './logement.component.html',
@@ -39,7 +40,7 @@ export class LogementComponent implements OnInit {
     this.logement.Publier(this.body,this.userFile).subscribe({
          next:(data:any)=>{
          this.body={}
-       
+         window.location.reload();
         
            },
            error:(err:any)=>{    

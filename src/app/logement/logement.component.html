@@ -1,120 +1,160 @@
-
-<main class="">   
-    <div class="px-5">  
-        <div class="theme-container">  
-            <div class="py-3">
-                <div class="mdc-card p-3"> 
-                    <div class="mdc-tab-bar-wrapper submit-property">  
-                        <div class="mdc-tab-bar mb-3">
-                            <div class="mdc-tab-scroller">
-                                <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;">
-                                    <div class="mdc-tab-scroller__scroll-content">
-                                        <button class="mdc-tab mdc-tab--active" tabindex="0" id="mdc-tab-1" aria-selected="true">
-                                            <span class="mdc-tab__content">
-                                            <span class="mdc-tab__text-label">Add Logement</span>
-                                            </span>
-                                            <span class="mdc-tab-indicator mdc-tab-indicator--active">
-                                            <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"style=""></span>
-                                            </span>
-                                            <span class="mdc-tab__ripple mdc-ripple-upgraded" style="--mdc-ripple-fg-size:68px; --mdc-ripple-fg-scale:1.96709; --mdc-ripple-fg-translate-start:15.6px, -4.2px; --mdc-ripple-fg-translate-end:23.0375px, -10px;"></span>
-                                        </button>
-                                       
-                                    </div>
-                                </div>
-                            </div>
+<div class="py-3">
+    <div class="mdc-card p-3"> 
+        <div class="mdc-tab-bar-wrapper submit-property">  
+            <div class="mdc-tab-bar mb-3">
+                <div class="mdc-tab-scroller">
+                    
+                    <div class="mdc-tab-scroller__scroll-area mdc-tab-scroller__scroll-area--scroll" style="margin-bottom: 0px;">
+                        <div class="mdc-tab-scroller__scroll-content">
+                            <button class="mdc-tab mdc-tab--active" tabindex="0" id="mdc-tab-1" aria-selected="true">
+                                <span class="mdc-tab__content">
+                                <span class="mdc-tab__text-label">Add Logement</span>
+                                </span>
+                                <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                                <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"style=""></span>
+                                </span>
+                                <span class="mdc-tab__ripple mdc-ripple-upgraded" style="--mdc-ripple-fg-size:68px; --mdc-ripple-fg-scale:1.96709; --mdc-ripple-fg-translate-start:15.6px, -4.2px; --mdc-ripple-fg-translate-end:23.0375px, -10px;"></span>
+                            </button>
+                           
                         </div>
-                        <div class="tab-content tab-content--active">  
-                            <form action="javascript:void(0);" id="sp-basic-form" class="row">  
-
-                                <div class="col-xs-12 p-2">  
-                                    <div class="mdc-text-field mdc-text-field--outlined">
-                                        <input class="mdc-text-field__input" id="adresse"  ngModel [(ngModel)]="body.adresse" name="adresse">
-                                        <div class="mdc-notched-outline mdc-notched-outline--upgraded">
-                                            <div class="mdc-notched-outline__leading"></div>
-                                            <div class="mdc-notched-outline__notch">
-                                                <label class="mdc-floating-label" >adresse</label>
-                                            </div>
-                                            <div class="mdc-notched-outline__trailing"></div>
-                                        </div>
-                                    </div> 
-                                </div>  
-
-
-                        <div class="col-xs-12 p-2">  
-                            <div class="mdc-text-field mdc-text-field--outlined">
-                                <input class="mdc-text-field__input" id="adresse" type="number" id="tentacles" name="tentacles"  ngModel [(ngModel)]="body.nbrChambre">
-                                <div class="mdc-notched-outline mdc-notched-outline--upgraded">
-                                    <div class="mdc-notched-outline__leading"></div>
-                                    <div class="mdc-notched-outline__notch">
-                                        <label class="mdc-floating-label" for="tentacles" >nombre de chambres</label>
-                                    </div>
-                                    <div class="mdc-notched-outline__trailing" ></div>
-                                </div>
-                            </div> 
-                        </div>  
-
-    
- 
-                                <div class="col-xs-12 col-sm-6 p-2">  
-                                    <div class="mdc-text-field mdc-text-field--outlined">
-                                        <input class="mdc-text-field__input" id="prix"  ngModel [(ngModel)]="body.prix" name="prix">
-                                        <div class="mdc-notched-outline mdc-notched-outline--upgraded">
-                                            <div class="mdc-notched-outline__leading"></div>
-                                            <div class="mdc-notched-outline__notch">
-                                                <label class="mdc-floating-label"style="">Price (€)</label>
-                                            </div>
-                                            <div class="mdc-notched-outline__trailing"></div>
-                                        </div>
-                                    </div> 
-                                
-
-
-
-                                <div class="col-xs-12 col-sm-6 p-2">
-                                    <div class="mdc-select mdc-select--outlined">
-                                        <div class="mdc-select__anchor">
-                                                <i class="mdc-select__dropdown-icon"></i>
-                                                <label class="mdc-floating-label"style="color:grey">Property type</label>
-                                                    <select class="form-control" style="width:10000px" aria-label="Default select example" 
-                                                    ngModel [(ngModel)]="body.type" name="type">
-                                                    
-                                                    <option class="not-empty-select" *ngFor="let c of Keysr()">{{c}}</option>
-                                                    </select>
-                                        
-                                        <div class="mdc-notched-outline__trailing"></div>
-                                  
-                                        </div>
-                                     </div>
-                                </div>
-                            </div>
-                             
-                                <div class="col-xs-12 p-2">  
-                                <div class="compose-option">
-                                    <i data-feather="camera"></i>
-                                    <span>Media</span>
-                                    <input id="feed-upload-input-2" type="file" type="file" accept=".png, .jpg, .jpeg" (change)="onSelectFile($event)" onchange="readURL(this)">
-                                </div>
-                                </div>
-                                
-                        
-                                 
-                           
-                               
-                           
-                                <div class="col-xs-12 p-2 mt-3 end-xs"> 
-                                    <button class="mdc-button mdc-button--raised next-tab mdc-ripple-upgraded" (click)="OnSubmit1()" type="button">
-                                        <span class="mdc-button__ripple"></span> 
-                                        <span class="mdc-button__label">Submit</span> 
-                                        
-                                    </button>  
-                                </div>  
-                            </form>  
-                        </div> 
-
+                    </div>
                 </div>
+            </div>
+            <div class="tab-content tab-content--active">  
+                <form action="javascript:void(0);" id="sp-basic-form" class="row">  
+
+                    <div class="col-xs-12 p-2">  
+                        
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          
+                            <input class="mdc-text-field__input" id="adresse"  ngModel [(ngModel)]="body.adresse" name="adresse" >
+                            <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                                <div class="mdc-notched-outline__leading"></div>
+                             
+                                    <label class="mdc-floating-label mdc-floating-label--float-above"  >address</label>
+                                    
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                       
+                    </div>  
+
+
+                    <div class="col-xs-12 p-2">  
+                        
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          
+                            <input class="mdc-text-field__input" id="nbrChambre" type="number" id="tentacles"ngModel [(ngModel)]="body.nbrChambre" name="tentacles" >
+                            <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                                <div class="mdc-notched-outline__leading"></div>
+                             
+                                    <label class="mdc-floating-label mdc-floating-label--float-above"  >nombre de chambre</label>
+                                    
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                       
+                    </div>  
+                                       
+                  
+            
+
+                    <div class="col-xs-12 p-2">  
+                        
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          
+                            <input class="mdc-text-field__input" id="prix"  ngModel [(ngModel)]="body.prix" name="prix" >
+                            <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                                <div class="mdc-notched-outline__leading"></div>
+                             
+                                    <label class="mdc-floating-label mdc-floating-label--float-above"  >Price (€)</label>
+                                    
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                       
+                    </div>  
+
+                  
+
+                    <div class="col-xs-12 p-2">  
+                        
+                        <div class="mdc-text-field mdc-text-field--outlined">
+                          
+                            <input class="mdc-text-field__input" matInput [matDatepicker]="picker" ngModel [(ngModel)]="body.dateDebut" name="dateDebut" >
+                            <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                                <div class="mdc-notched-outline__leading"></div>
+                             
+                                    <label class="mdc-floating-label mdc-floating-label--float-above"  >libre en</label>
+                                    
+                                </div>
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                       
+                    </div>  
+
+
+                   
+
+
+
+
+                    <div class="col-xs-12 p-2">  
+                        
+                        <div class="mdc-select mdc-select--outlined">
+                            <div class="mdc-select__anchor">
+                                <i class="mdc-select__dropdown-icon"></i>
+                                <div class="mdc-notched-outline__leading"></div>
+                                <label class="mdc-floating-label mdc-floating-label--float-above"  >Property type</label>
+                                <select class="form-control" style="width:10000px" aria-label="Default select example" 
+                                ngModel [(ngModel)]="body.type" name="type">
+                                <option class="not-empty-select" *ngFor="let c of Keysr()">{{c}}</option>
+                            </select>
+                            <div class="mdc-notched-outline mdc-notched-outline--upgraded">
+                                
+                             
+                                    
+                                    
+                                </div>
+                                <div class="mdc-notched-outline__trailing"></div>
+                            </div>
+                       
+                    </div>  
+                        
+
+                 
+                    
+                </div>
+                 
+                    <div class="col-xs-12 p-2">  
+                        <div class="compose-option">
+                            <i data-feather="camera"></i>
+                        <span>Media</span>
+                        <input id="feed-upload-input-2" type="file" type="file" accept=".png, .jpg, .jpeg" (change)="onSelectFile($event)" onchange="readURL(this)">
+                            
+                        </div>
+                 
+                    
+                    </div>
+                     
+                      
+                 
+                     
+               
+                   
+               
+                    <div class="col-xs-12 p-2 mt-3 end-xs"> 
+                        <button class="mdc-button mdc-button--raised next-tab mdc-ripple-upgraded" (click)="OnSubmit1()" type="button">
+                            <span class="mdc-button__ripple"></span> 
+                            <span class="mdc-button__label">Submit</span> 
+                            
+                        </button>  
+                    </div>  
+                </form>  
             </div> 
-        </div>  
-    </div> 
+
     </div>
-   
-</main>
+</div> 
+</div>  
